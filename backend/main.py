@@ -19,21 +19,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ─── Caminhos dos JSONs ───────────────────────────────────────────────────────
-
 ARQUIVO_LEITURAS = "data/leituras.json"
 ARQUIVO_ALERTAS  = "data/alertas.json"
 ARQUIVO_HABITATS = "data/habitats.json"
-
-# ─── Modelos ──────────────────────────────────────────────────────────────────
 
 class Leitura(BaseModel):
     zona: str
     density_of_maxima: float
     lyapunov_estimado: float
     regime_classificado: str
-
-# ─── Helpers ─────────────────────────────────────────────────────────────────
 
 def carregar_json(caminho: str):
     with open(caminho, "r", encoding="utf-8") as f:
@@ -44,18 +38,12 @@ def salvar_json(caminho: str, dados):
         json.dump(dados, f, indent=4, ensure_ascii=False)
 
 def classificar_regime(density: float, lyapunov: float) -> str:
-    """
-    Lógica simplificada do algoritmo SAC-DM.
-    Classifica o regime com base na Density of Maxima e no Expoente de Lyapunov.
-    """
     if lyapunov > 0.7 or density > 8.0:
         return "CAOTICO"
     elif lyapunov > 0.4 or density > 5.0:
         return "TRANSICAO"
     else:
         return "ESTOCASTICO"
-
-# ─── Raiz ────────────────────────────────────────────────────────────────────
 
 @app.get("/")
 def home():
@@ -65,8 +53,6 @@ def home():
         "versao": "1.0",
         "endpoints": ["/leituras", "/alertas", "/habitats", "/analise/zona/{zona}"]
     }
-
-# ─── Leituras — CRUD Completo ────────────────────────────────────────────────
 
 @app.get("/leituras", summary="Listar todas as leituras de telemetria")
 def listar_leituras():
@@ -108,17 +94,9 @@ def deletar_leitura(id: int):
             return {"mensagem": f"Leitura #{id} removida com sucesso"}
     raise HTTPException(status_code=404, detail="Leitura não encontrada")
 
-# ─── Endpoint Estrela — Análise SAC-DM por Zona ──────────────────────────────
-
 @app.post("/analise/zona/{zona}", summary="Analisar telemetria de uma zona com algoritmo SAC-DM")
 def analisar_zona(zona: str, janela: int = 10):
-    """
-    Endpoint principal do produto. Recebe o nome de uma zona, busca as últimas
-    N leituras (janela), aplica a lógica SAC-DM simplificada e retorna:
-    - regime classificado
-    - métricas estatísticas (média DM, média Lyapunov, desvio padrão)
-    - alerta gerado automaticamente se regime = CAOTICO
-    """
+    
     todas = carregar_json(ARQUIVO_LEITURAS)
     leituras_zona = [l for l in todas if l["zona"].upper() == zona.upper()]
 
@@ -128,7 +106,6 @@ def analisar_zona(zona: str, janela: int = 10):
             detail=f"Nenhuma leitura encontrada para a zona '{zona}'"
         )
 
-    # Pega as últimas N leituras da janela
     janela_leituras = leituras_zona[-janela:]
 
     densities = [l["density_of_maxima"] for l in janela_leituras]
@@ -140,7 +117,6 @@ def analisar_zona(zona: str, janela: int = 10):
 
     regime = classificar_regime(media_dm, media_lyp)
 
-    # Gera alerta automático se regime CAOTICO
     alerta_gerado = None
     if regime == "CAOTICO":
         alertas = carregar_json(ARQUIVO_ALERTAS)
@@ -167,8 +143,6 @@ def analisar_zona(zona: str, janela: int = 10):
         "alerta_gerado": alerta_gerado
     }
 
-# ─── Alertas ─────────────────────────────────────────────────────────────────
-
 @app.get("/alertas", summary="Listar todos os alertas")
 def listar_alertas():
     return carregar_json(ARQUIVO_ALERTAS)
@@ -179,8 +153,6 @@ def buscar_alerta(id: int):
         if alerta["id"] == id:
             return alerta
     raise HTTPException(status_code=404, detail="Alerta não encontrado")
-
-# ─── Habitats ────────────────────────────────────────────────────────────────
 
 @app.get("/habitats", summary="Listar habitats monitorados")
 def listar_habitats():

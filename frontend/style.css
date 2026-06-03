@@ -1131,38 +1131,30 @@ footer {
     color: #94a3b8;
 }
 
-/* Isso organiza os cards em grade dentro da área de resumo */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
 }
 
-/* Isso garante que a tabela não cole no footer */
 .dashboard-container {
     margin-bottom: 50px;
     padding-bottom: 50px;
 }
 
-/* Isso garante que o texto dentro dos cards siga o tema do site */
 .card h4 {
-    color: #22D3EE !important; /* Cor neon padrão do seu site */
+    color: #22D3EE !important; 
     margin-bottom: 5px;
 }
 
 .card p {
-    color: #d1d5db; /* Cor de texto padrão, não vermelho */
+    color: #d1d5db; 
 }
-/* ════════════════════════════════════════════════
-   CORREÇÕES E MELHORIAS — Laika System v2
-═════════════════════════════════════════════════ */
 
-/* Remove qualquer padding extra que estava colando seções */
 .science-section {
     padding: 100px 24px !important;
 }
 
-/* Dashboard — grade lado a lado habitats / alertas */
 .dashboard-twin-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1197,13 +1189,11 @@ footer {
     color: #EF4444;
 }
 
-/* Ponto vermelho piscante para alertas */
 .blink-red {
     background-color: #EF4444 !important;
     box-shadow: 0 0 8px #EF4444 !important;
 }
 
-/* Cards dentro da grade de habitats / alertas */
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1234,7 +1224,6 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Badge na tabela */
 .table-badge {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.7rem;
@@ -1255,18 +1244,15 @@ footer {
     background: rgba(30, 41, 59, 0.5);
 }
 
-/* Margem correta no dashboard antes do footer */
 #dashboard {
     padding-bottom: 80px;
 }
 
-/* Garante que a seção de cadastro tenha padding correto */
 #cadastro .container {
     padding-top: 0;
     padding-bottom: 0;
 }
 
-/* Animação de entrada suave nos cards */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -1276,11 +1262,6 @@ footer {
     animation: fadeInUp 0.4s ease both;
 }
 
-/* ══════════════════════════════════════════════
-   NOVOS ESTILOS — Alinhamento ao Produto v3
-══════════════════════════════════════════════ */
-
-/* Botão CTA na navbar */
 .nav-cta {
     background: rgba(34, 211, 238, 0.1) !important;
     border: 1px solid rgba(34, 211, 238, 0.4) !important;
@@ -1292,7 +1273,6 @@ footer {
     background: rgba(34, 211, 238, 0.2) !important;
 }
 
-/* Stats no hero */
 .hero-stats {
     display: flex;
     gap: 32px;
@@ -1314,7 +1294,6 @@ footer {
     text-transform: uppercase;
 }
 
-/* Grade do SAC-DM */
 .sacdm-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1346,7 +1325,6 @@ footer {
 }
 .sacdm-step p { color: #94A3B8; font-size: 0.9rem; line-height: 1.6; }
 
-/* Badge dos regimes */
 .regime-badge {
     margin-top: 16px;
     padding: 6px 12px;
@@ -1358,7 +1336,6 @@ footer {
     display: inline-block;
 }
 
-/* Tags de endpoint */
 .endpoint-tag {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.65rem;
@@ -1376,7 +1353,6 @@ footer {
     border-color: rgba(239,68,68,0.2);
 }
 
-/* code inline */
 .code-tag {
     color: #22D3EE;
     background: rgba(34,211,238,0.08);
@@ -1386,7 +1362,6 @@ footer {
     font-size: 0.88em;
 }
 
-/* Labels do formulário */
 .input-label {
     display: block;
     color: #64748B;
@@ -1398,7 +1373,6 @@ footer {
 }
 .input-group { display: flex; flex-direction: column; }
 
-/* Feedback do formulário */
 .feedback-box {
     margin-top: 20px;
     padding: 16px 20px;
@@ -1418,24 +1392,19 @@ footer {
     color: #EF4444;
 }
 
-/* Coluna Lyapunov na tabela */
 .lyapunov-cell { color: #94A3B8; font-size: 0.88rem; }
 
-/* Cores de regime na tabela */
 .regime-estocastico { color: #10B981; font-weight: 600; }
 .regime-transicao    { color: #F59E0B; font-weight: 600; }
 .regime-caotico      { color: #EF4444; font-weight: 600; }
 
-/* Cards de habitats com status colorido */
 .habitat-status-ativo     { color: #10B981; }
 .habitat-status-manutencao{ color: #F59E0B; }
 
-/* Cards de alertas com nível colorido */
 .alerta-nivel-vermelho { color: #EF4444; font-weight: 700; }
 .alerta-nivel-amarelo  { color: #F59E0B; font-weight: 700; }
 .alerta-nivel-verde    { color: #10B981; font-weight: 700; }
 
-/* Botão salvar loading */
 .save-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;

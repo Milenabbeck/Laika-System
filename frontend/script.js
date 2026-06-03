@@ -1,7 +1,5 @@
 const API = "https://laika-system.onrender.com";
 
-// ─── HELPERS ─────────────────────────────────────────────────────────────────
-
 function regimeClass(regime) {
     if (!regime) return '';
     const r = regime.toUpperCase();
@@ -33,8 +31,6 @@ function mostrarFeedback(mensagem, tipo) {
     box.style.display = "block";
     setTimeout(() => { box.style.display = "none"; }, 4000);
 }
-
-// ─── LEITURAS ────────────────────────────────────────────────────────────────
 
 async function carregarLeituras() {
     try {
@@ -163,8 +159,6 @@ async function editarLeitura(id) {
     }
 }
 
-// ─── ALERTAS ─────────────────────────────────────────────────────────────────
-
 async function carregarAlertas() {
     try {
         const resposta = await fetch(`${API}/alertas`);
@@ -184,8 +178,6 @@ async function carregarAlertas() {
     }
 }
 
-// ─── HABITATS ────────────────────────────────────────────────────────────────
-
 async function carregarHabitats() {
     try {
         const resposta = await fetch(`${API}/habitats`);
@@ -204,8 +196,6 @@ async function carregarHabitats() {
         console.error("Erro ao carregar habitats:", erro);
     }
 }
-
-// ─── INIT ────────────────────────────────────────────────────────────────────
 
 carregarLeituras();
 carregarAlertas();
