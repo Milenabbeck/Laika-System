@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laika System - Monitoramento Preditivo de Integridade Estrutural</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════
+         NAVBAR
+    ══════════════════════════════════════════ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-nav">◉ LAIKA SYSTEM</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Solução</a></li>
+                <li><a href="#ciencia">Algoritmo</a></li>
+                <li><a href="#regimes">Regimes</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#cadastro" class="nav-cta">Nova Leitura</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════
+         HERO — fundo escuro #030712
+    ══════════════════════════════════════════ -->
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <p class="mini-title">DEEPTECH · SAAS B2B · HABITATS ESPACIAIS</p>
+                <h1>Monitoramento Preditivo de Integridade Estrutural</h1>
+                <p class="hero-description">
+                    A Laika System vende um software que detecta microfissuras em cascos de habitats espaciais
+                    antes que se tornem visíveis usando a Teoria do Caos e o algoritmo SAC-DM.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#dashboard" class="btn primary-btn">Acessar Dashboard</a>
+                    <a href="#ciencia" class="btn secondary-btn">Ver o Algoritmo</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Habitats Monitorados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">2400</span>
+                        <span class="stat-label">Hz de Amostragem</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">SAC-DM</span>
+                        <span class="stat-label">Algoritmo Proprietário</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-telemetry-fullscreen">
+            <div class="fullscreen-panel-header">
+                <span class="status-blink"></span> LIVE SENSOR STREAM // COGNITIVE ORBITAL MATRIX
+            </div>
+            <div class="fullscreen-wave-container">
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+            </div>
+            <div class="fullscreen-panel-data">
+                <div class="data-block"><span>ORBITAL VELOCITY</span> 7.66 km/s</div>
+                <div class="data-block"><span>SAMPLING RATE</span> 2400 Hz</div>
+                <div class="data-block"><span>SAC-DM SPECTRUM</span> ACTIVE</div>
+                <div class="data-block"><span>LYAPUNOV STATUS</span> OPTIMAL</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SOLUÇÃO — fundo claro (.sobre)
+    ══════════════════════════════════════════ -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <p class="mini-title" style="margin-bottom:12px;">O PRODUTO</p>
+                <h2>Software SaaS B2B para Segurança Orbital</h2>
+                <p>
+                    A Laika System conecta uma rede de sensores piezoelétricos instalados no casco do habitat
+                    a um pipeline de análise baseado em Teoria do Caos. O resultado: detecção de falhas estruturais
+                    semanas antes de qualquer inspeção visual — entregue como plataforma SaaS com painel web e API.
+                </p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">⬡</div>
+                    <h3>Hardware Agnóstico</h3>
+                    <p>Sensores piezoelétricos (PZT) de commodity instalados na superfície interna do casco.
+                    O diferencial competitivo é o algoritmo, não o hardware.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⬡</div>
+                    <h3>Algoritmo SAC-DM</h3>
+                    <p>Signal Analysis based on Chaos using Density of Maxima. Detecta a transição de regime
+                    estocástico para caótico — sinal físico inequívoco de microfissura em propagação.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⬡</div>
+                    <h3>SaaS com API REST</h3>
+                    <p>Dashboard web + API FastAPI com CRUD completo. Operadores acessam alertas estratificados
+                    em três níveis: Verde (nominal), Amarelo (atenção), Vermelho (ação imediata).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         ALGORITMO — fundo escuro
+    ══════════════════════════════════════════ -->
+    <section id="ciencia" class="science-section container">
+        <div class="section-header">
+            <p class="mini-title" style="margin-bottom:12px;">MOTOR TÉCNICO</p>
+            <h2>O Algoritmo SAC-DM</h2>
+            <p>
+                Desenvolvido pelo Dr. Jorge Gabriel Ramos (UFPB), o SAC-DM é a primeira aplicação de análise caótica
+                a ondas elásticas em cascos espaciais. A Laika System detém o uso exclusivo dessa tecnologia
+                para o segmento de habitats orbitais — nenhum paper ou patente registrada cobre essa intersecção específica.
+            </p>
+        </div>
+
+        <div class="sacdm-grid">
+            <div class="sacdm-step">
+                <div class="step-num">01</div>
+                <h4>Coleta de Ondas Elásticas</h4>
+                <p>Sensores PZT captam Ondas de Lamb que se propagam pelo casco sólido. O vácuo espacial elimina ruído acústico externo — o sinal estrutural fica mais limpo que em qualquer ambiente terrestre.</p>
+            </div>
+            <div class="sacdm-step">
+                <div class="step-num">02</div>
+                <h4>Cálculo da Density of Maxima</h4>
+                <p>O algoritmo conta picos do sinal em janelas temporais deslizantes. Uma estrutura saudável produz sinal gaussiano aleatório. Uma microfissura injeta energia não-linear — o sinal transita para caos determinístico.</p>
+            </div>
+            <div class="sacdm-step">
+                <div class="step-num">03</div>
+                <h4>Expoente de Lyapunov</h4>
+                <p>Métrica que quantifica o afastamento exponencial de trajetórias no espaço de fase. Valor positivo confirma regime caótico. É a ferramenta definitiva para separar ruído operacional de anomalia estrutural real.</p>
+            </div>
+            <div class="sacdm-step">
+                <div class="step-num">04</div>
+                <h4>Classificação e Alerta</h4>
+                <p>A API classifica automaticamente: ESTOCASTICO (nominal), TRANSICAO (atenção) ou CAOTICO (alerta vermelho). Se CAOTICO, gera registro imediato na fila de alertas críticos do operador.</p>
+            </div>
+        </div>
+
+        <div class="cards" style="margin-top: 32px;">
+            <div class="card dynamic-card">
+                <h4 style="color:#22D3EE; font-family:'Orbitron'; margin-bottom:10px; font-size:0.9rem;">Density of Maxima (Hz)</h4>
+                <p>Mapeia a densidade de picos locais de frequência por janela temporal. Alterações bruscas indicam modificações físicas microscópicas no trajeto da onda através do casco — o precursor mensurável da falha.</p>
+            </div>
+            <div class="card dynamic-card">
+                <h4 style="color:#22D3EE; font-family:'Orbitron'; margin-bottom:10px; font-size:0.9rem;">Expoente de Lyapunov</h4>
+                <p>Monitora o afastamento exponencial de trajetórias no espaço de fase do sinal. É a assinatura matemática do caos determinístico — a diferença entre ruído operacional e microfissura em propagação ativa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         REGIMES — fundo claro (.sobre)
+    ══════════════════════════════════════════ -->
+    <section id="regimes" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <p class="mini-title" style="margin-bottom:12px;">SISTEMA DE ALERTAS</p>
+                <h2>Três Regimes Operacionais</h2>
+                <p>O algoritmo SAC-DM classifica cada leitura de telemetria em um dos três regimes abaixo.
+                   Esses regimes são o vocabulário técnico da API e do dashboard — o que o operador vê na tela.</p>
+            </div>
+            <div class="cards dynamic-grid">
+                <div class="card dynamic-card" style="border-left: 4px solid #10B981;">
+                    <span style="color:#10B981; font-weight:700; font-size:0.85rem; font-family:'Orbitron';">🟢 ESTOCASTICO</span>
+                    <h3 style="margin-top:12px; font-size:1.05rem; color:#fff;">Nominal — Estrutura Íntegra</h3>
+                    <p>Comportamento gaussiano esperado. O casco amortece eficientemente impactos externos. Sem ação necessária. Density of Maxima dentro do limiar de calibração da zona.</p>
+                    <div class="regime-badge" style="background: rgba(16,185,129,0.1); color: #10B981; border-color: rgba(16,185,129,0.3);">CAMPO: regime_classificado = "ESTOCASTICO"</div>
+                </div>
+                <div class="card dynamic-card" style="border-left: 4px solid #F59E0B;">
+                    <span style="color:#F59E0B; font-weight:700; font-size:0.85rem; font-family:'Orbitron';">🟡 TRANSICAO</span>
+                    <h3 style="margin-top:12px; font-size:1.05rem; color:#fff;">Atenção — Monitoramento Elevado</h3>
+                    <p>Surgimento de bifurcações no espaço de fase. Indica início de estresse molecular ou microfissura interna em estágio inicial. Programar inspeção não-urgente da zona.</p>
+                    <div class="regime-badge" style="background: rgba(245,158,11,0.1); color: #F59E0B; border-color: rgba(245,158,11,0.3);">CAMPO: regime_classificado = "TRANSICAO"</div>
+                </div>
+                <div class="card dynamic-card" style="border-left: 4px solid #EF4444;">
+                    <span style="color:#EF4444; font-weight:700; font-size:0.85rem; font-family:'Orbitron';">🔴 CAOTICO</span>
+                    <h3 style="margin-top:12px; font-size:1.05rem; color:#fff;">Crítico — Ação Imediata</h3>
+                    <p>Caos determinístico confirmado. Expoente de Lyapunov positivo e Density of Maxima acima do limiar crítico. A API gera alerta VERMELHO automaticamente neste regime.</p>
+                    <div class="regime-badge" style="background: rgba(239,68,68,0.1); color: #EF4444; border-color: rgba(239,68,68,0.3);">CAMPO: regime_classificado = "CAOTICO"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DASHBOARD — fundo escuro
+    ══════════════════════════════════════════ -->
+    <section id="dashboard" class="science-section container">
+
+        <div class="section-header">
+            <p class="mini-title" style="margin-bottom:12px;">API REST — DADOS AO VIVO</p>
+            <h2>Painel de Controle de Missão</h2>
+            <p>
+                Todos os dados abaixo são consumidos em tempo real da API FastAPI (Python).
+                Os endpoints <code class="code-tag">GET /habitats</code>, <code class="code-tag">GET /alertas</code>
+                e <code class="code-tag">GET /leituras</code> alimentam este painel dinamicamente.
+            </p>
+        </div>
+
+        <!-- Status: habitats + alertas lado a lado -->
+        <div class="dashboard-twin-grid">
+            <div class="twin-col">
+                <h3 class="twin-title">
+                    <span class="status-blink"></span> Habitats Monitorados
+                    <span class="endpoint-tag">GET /habitats</span>
+                </h3>
+                <div id="lista-habitats" class="cards-grid"></div>
+            </div>
+            <div class="twin-col">
+                <h3 class="twin-title twin-title--alert">
+                    <span class="status-blink blink-red"></span> Alertas Ativos
+                    <span class="endpoint-tag endpoint-tag--red">GET /alertas</span>
+                </h3>
+                <div id="lista-alertas" class="cards-grid"></div>
+            </div>
+        </div>
+
+        <!-- Tabela CRUD -->
+        <div class="dashboard-container">
+            <div class="table-header">
+                <h3>Logs de Telemetria — CRUD Completo</h3>
+                <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                    <span class="table-badge">GET /leituras</span>
+                    <span class="table-badge" style="background:rgba(16,185,129,0.08); color:#10B981; border-color:rgba(16,185,129,0.2);">POST /leituras</span>
+                    <span class="table-badge" style="background:rgba(245,158,11,0.08); color:#F59E0B; border-color:rgba(245,158,11,0.2);">PUT /leituras/{id}</span>
+                    <span class="table-badge" style="background:rgba(239,68,68,0.08); color:#EF4444; border-color:rgba(239,68,68,0.2);">DELETE /leituras/{id}</span>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Zona / Módulo</th>
+                            <th>Density of Maxima</th>
+                            <th>Lyapunov Est.</th>
+                            <th>Regime</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-leituras"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CADASTRO — fundo claro (.sobre)
+    ══════════════════════════════════════════ -->
+    <section id="cadastro" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <p class="mini-title" style="margin-bottom:12px;">POST /leituras</p>
+                <h2>Registrar Nova Leitura de Sensor</h2>
+                <p>
+                    Simula a entrada de dados de um sensor piezoelétrico no pipeline da plataforma.
+                    Os campos abaixo correspondem diretamente ao modelo de dados da API:
+                    <code class="code-tag">zona</code>, <code class="code-tag">density_of_maxima</code>,
+                    <code class="code-tag">lyapunov_estimado</code> e <code class="code-tag">regime_classificado</code>.
+                </p>
+            </div>
+            <div class="cadastro-box">
+                <div class="formulario">
+                    <div class="input-group">
+                        <label class="input-label">Zona / Módulo</label>
+                        <input type="text" id="zona" placeholder="Ex: ZONA-04 / PAINEL-NORTE" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Density of Maxima (Hz)</label>
+                        <input type="number" step="0.01" id="density" placeholder="Ex: 5.80" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Índice de Lyapunov</label>
+                        <input type="number" step="0.01" id="lyapunov" placeholder="Ex: 0.64" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Regime Classificado</label>
+                        <select id="regime">
+                            <option value="ESTOCASTICO">ESTOCASTICO — Nominal</option>
+                            <option value="TRANSICAO">TRANSICAO — Atenção</option>
+                            <option value="CAOTICO">CAOTICO — Crítico</option>
+                        </select>
+                    </div>
+                    <div class="input-group" style="display:flex; align-items:flex-end;">
+                        <button class="btn save-btn" id="btn-salvar" onclick="salvarLeitura()">
+                            Enviar via POST
+                        </button>
+                    </div>
+                </div>
+                <div id="feedback-cadastro" class="feedback-box" style="display:none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <h3>◉ LAIKA SYSTEM</h3>
+                <p>Plataforma SaaS DeepTech de Monitoramento Preditivo de Integridade Estrutural.</p>
+                <p style="color:#475569; margin-top:6px; font-size:0.8rem;">API: FastAPI · Python · JSON · REST</p>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2026 Laika System. Desenvolvido para a Global Solution — FIAP.</p>
+                <p class="gs-tag">Framework Application — 1º Semestre 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

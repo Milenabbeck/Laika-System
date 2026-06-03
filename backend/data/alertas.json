@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nivel": "VERMELHO",
+        "descricao": "Microfissura detectada",
+        "status": "ABERTO"
+    },
+    {
+        "id": 2,
+        "nivel": "AMARELO",
+        "descricao": "Oscilação acima do limite",
+        "status": "RECONHECIDO"
+    },
+    {
+        "id": 3,
+        "nivel": "VERDE",
+        "descricao": "Sistema estabilizado",
+        "status": "RESOLVIDO"
+    }
+]

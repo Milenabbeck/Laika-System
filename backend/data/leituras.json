@@ -1,0 +1,9 @@
+[
+    {
+        "id": 4,
+        "zona": "ZONA-01",
+        "density_of_maxima": 4.2,
+        "lyapunov_estimado": 0.65,
+        "regime_classificado": "CAOTICO"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "Aurora",
+        "operador": "ESA",
+        "status": "ATIVO"
+    },
+    {
+        "id": 2,
+        "nome": "Orion",
+        "operador": "NASA",
+        "status": "ATIVO"
+    },
+    {
+        "id": 3,
+        "nome": "Vega",
+        "operador": "SpaceX",
+        "status": "MANUTENCAO"
+    }
+]
